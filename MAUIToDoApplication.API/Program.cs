@@ -1,7 +1,4 @@
-using MAUIToDoApplication.API.Data;
 using MAUIToDoApplication.API.Extensions;
-using MAUIToDoApplication.API.Models;
-using Microsoft.EntityFrameworkCore;
 
 namespace MAUIToDoApplication.API
 {
