@@ -7,8 +7,12 @@ namespace MAUIToDoApplication.API.Extensions
     {
         public static WebApplicationBuilder RegisterServices(this WebApplicationBuilder builder)
         {
+            var urls = builder.Configuration.GetSection("AppliCationUrls").GetChildren().Select(q => q.Value).ToArray(); ;
+            builder.WebHost.UseUrls(urls);
+            
             builder.Services.AddDbContext<AppDbContext>(opt =>
                 opt.UseNpgsql(builder.Configuration.GetConnectionString("NpgSqlConnection")));
+            
             return builder;
         }
     }

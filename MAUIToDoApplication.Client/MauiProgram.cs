@@ -6,6 +6,7 @@ namespace MAUIToDoApplication.Client
     {
         public static MauiApp CreateMauiApp()
         {
+            //services.AddHttpClient<ICommonApiClient, CommonApiClent>();
             var builder = MauiApp.CreateBuilder();
             builder
                 .UseMauiApp<App>()
