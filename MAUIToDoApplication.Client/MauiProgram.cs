@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using MAUIToDoApplication.Client.Extensions;
+using Microsoft.Extensions.Logging;
 
 namespace MAUIToDoApplication.Client
 {
@@ -15,7 +16,7 @@ namespace MAUIToDoApplication.Client
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
                     fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
                 });
-
+            builder.RegisterServices();
 #if DEBUG
 		builder.Logging.AddDebug();
 #endif
