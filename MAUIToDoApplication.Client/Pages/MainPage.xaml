@@ -4,12 +4,19 @@
              x:Class="MAUIToDoApplication.Client.Pages.MainPage">
 
     <ContentPage.ToolbarItems>
-        <ToolbarItem Text="Add new ToDo" Command="{Binding CommandAddNewToDo}"/>
+        <ToolbarItem 
+            Text="Add new ToDo" 
+            Command="{Binding CommandAddNewToDo}"/>
     </ContentPage.ToolbarItems>
-    <CollectionView SelectionMode="Single" ItemsSource="{Binding Collection}">
+    <CollectionView 
+        SelectionMode="Single" 
+        ItemsSource="{Binding Collection}"
+        SelectedItem="{Binding SelectedItem}">
         <CollectionView.ItemTemplate>
             <DataTemplate>
-                <Label Text="{Binding ToDoName}" FontSize="Medium"/>
+                <Label 
+                    Text="{Binding ToDoName}"
+                    FontSize="Medium"/>
             </DataTemplate>
         </CollectionView.ItemTemplate>
     </CollectionView>

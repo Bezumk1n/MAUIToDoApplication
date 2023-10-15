@@ -18,6 +18,10 @@ namespace MAUIToDoApplication.Client.Pages
         /// Collection of ToDos
         /// </summary>
         public List<ToDo> Collection { get; set; }
+        /// <summary>
+        /// Current selected ToDo
+        /// </summary>
+        public ToDo SelectedItem { get; set; }
         #endregion
         /// <summary>
         /// Command - add a new ToDo item
