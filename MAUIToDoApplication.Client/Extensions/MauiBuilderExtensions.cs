@@ -15,7 +15,7 @@ namespace MAUIToDoApplication.Client.Extensions
             builder.Services.AddSingleton<IRestDataService, RestDataService>();
 
             builder.Services.AddSingleton<MainPageVM>();
-            builder.Services.AddSingleton<MainPage>(service => new MainPage(service.GetRequiredService<MainPageVM>()));
+            builder.Services.AddSingleton<MainPage>();
 
             return builder;
         }

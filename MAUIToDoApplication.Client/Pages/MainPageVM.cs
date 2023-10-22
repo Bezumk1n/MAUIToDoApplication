@@ -10,7 +10,7 @@ using System.Windows.Input;
 
 namespace MAUIToDoApplication.Client.Pages
 {
-    internal class MainPageVM : VM
+    public class MainPageVM : VM
     {
         #region Properties
         private readonly IRestDataService _service;

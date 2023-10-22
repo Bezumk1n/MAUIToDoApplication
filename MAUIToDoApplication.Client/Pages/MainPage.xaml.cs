@@ -2,7 +2,7 @@
 {
     public partial class MainPage : ContentPage
     {
-        public MainPage(object context)
+        public MainPage(MainPageVM context)
         {
             InitializeComponent();
             BindingContext = context;

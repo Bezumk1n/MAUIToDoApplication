@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MAUIToDoApplication.Client.Common
 {
-    internal class VM : NotifyObject
+    public class VM : NotifyObject
     {
         /// <summary>
         /// Title of the ViewModel
