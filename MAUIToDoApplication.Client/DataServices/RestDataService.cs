@@ -19,7 +19,7 @@ namespace MAUIToDoApplication.Client.DataServices
         public RestDataService()
         {
             _httpClient = new HttpClient();
-            _baseAddress = DeviceInfo.Platform == DevicePlatform.Android ? "http://10.0.2.2:5100" : "https://localhost:5100";
+            _baseAddress = DeviceInfo.Platform == DevicePlatform.Android ? "http://10.0.2.2:5100" : "http://localhost:5100";
             _url = $"{_baseAddress}/api";
 
             _jsonSerializeOptions = new JsonSerializerOptions

@@ -27,13 +27,16 @@ namespace MAUIToDoApplication.Client.Pages
         /// Command - add a new ToDo item
         /// </summary>
         public ICommand CommandAddNewToDo { get; }
+        /// <summary>
+        /// Command - edit selected ToDo item
+        /// </summary>
+        public ICommand CommandEditToDo { get; }
         #region Constructor
         public MainPageVM(IRestDataService service)
         {
             _service = service;
-
             CommandAddNewToDo = new DelegateCommand(async _ => await AddNewToDo());
-
+            CommandEditToDo = new DelegateCommand(async _ => await EditToDo());
             Initialization();
         }
         #endregion
@@ -53,7 +56,23 @@ namespace MAUIToDoApplication.Client.Pages
         /// <returns></returns>
         private async Task AddNewToDo()
         {
-
+            var navigationParameter = new Dictionary<string, object>()
+            {
+                { nameof(ToDo), new ToDo() }
+            };
+            await Shell.Current.GoToAsync(nameof(ManageToDoPageV), navigationParameter);
+        }
+        /// <summary>
+        /// Edit currently selected ToDo item
+        /// </summary>
+        /// <returns></returns>
+        private async Task EditToDo()
+        {
+            var navigationParameter = new Dictionary<string, object>()
+            {
+                { nameof(ToDo), SelectedItem }
+            };
+            await Shell.Current.GoToAsync(nameof(ManageToDoPageV), navigationParameter);
         }
         #endregion
     }

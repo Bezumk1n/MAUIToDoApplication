@@ -16,6 +16,8 @@ namespace MAUIToDoApplication.Client.Extensions
 
             builder.Services.AddSingleton<MainPageVM>();
             builder.Services.AddSingleton<MainPage>();
+            builder.Services.AddTransient<ManageToDoPageV>();
+            builder.Services.AddTransient<ManageToDoPageVM>();
 
             return builder;
         }
