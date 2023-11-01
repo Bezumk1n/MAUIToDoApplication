@@ -7,5 +7,10 @@
             InitializeComponent();
             BindingContext = context;
         }
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+            ((MainPageVM)BindingContext).InitializationOnAppearing();
+        }
     }
 }

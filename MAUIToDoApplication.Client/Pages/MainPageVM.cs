@@ -37,15 +37,14 @@ namespace MAUIToDoApplication.Client.Pages
             _service = service;
             CommandAddNewToDo = new DelegateCommand(async _ => await AddNewToDo());
             CommandEditToDo = new DelegateCommand(async _ => await EditToDo());
-            Initialization();
         }
         #endregion
         #region Methods
         /// <summary>
-        /// Initialization method that populates Collcetion
+        /// Initialization method that populates Collection
         /// </summary>
         /// <returns></returns>
-        public async Task Initialization()
+        public async Task InitializationOnAppearing()
         {
             Collection = await _service.GetAllToDosAsync();
             OnPropertyChanged(() => Collection);
